@@ -1,7 +1,7 @@
 # FinalProject
 
 #### 介绍
-大作业
+homework for baidu android development
 
 #### 软件架构
 软件架构说明
