@@ -7,10 +7,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.example.mybaidu.R
-import java.net.URL
 
-class MyAdapter(val data:List<News>,val context: Context): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyNewsAdapter(val data:List<News>, val context: Context): RecyclerView.Adapter<MyNewsAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = View.inflate(context,R.layout.news_item,null)
@@ -23,7 +24,8 @@ class MyAdapter(val data:List<News>,val context: Context): RecyclerView.Adapter<
         holder.titleView.text = item.title
         holder.authorView.text = item.author
         if(item.photo != ""){
-            Glide.with(holder.photo.context).load(item.photo).placeholder(0).
+            val option:RequestOptions = RequestOptions().transform(RoundedCorners(50))
+            Glide.with(holder.photo.context).load(item.photo).apply(option).
             thumbnail(0.5f).into(holder.photo)
         }
 //        else{

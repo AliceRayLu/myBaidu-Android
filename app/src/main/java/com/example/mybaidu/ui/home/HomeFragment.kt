@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mybaidu.R
-import com.example.mybaidu.data.MyAdapter
+import com.example.mybaidu.data.MyNewsAdapter
 import com.example.mybaidu.data.News
 
 class HomeFragment : Fragment() {
@@ -26,6 +26,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var context: Context
+    private lateinit var newsData:ArrayList<News>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,11 +46,8 @@ class HomeFragment : Fragment() {
 
         recyclerView = root.findViewById(R.id.recyclerview)
         context = root.context
-        var newsData = ArrayList<News>()
-        newsData.add(News("Morning News","xinhua",""))
-        newsData.add(News("Good morning America: welcome Taylor Swift","BBC","http://images.unsplash.com/photo-1548778052-311f4bc2b502?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"))
-        newsData.add(News("Biden fell down","White House","http://images.unsplash.com/photo-1593047614267-378b863c98c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1734&q=80"))
-        val adapter = MyAdapter(newsData,context)
+        initData()
+        val adapter = MyNewsAdapter(newsData,context)
         recyclerView.adapter = adapter
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
@@ -57,10 +55,11 @@ class HomeFragment : Fragment() {
         return root
     }
 
-    override fun onResume() {
-        super.onResume()
-
-
+    fun initData(){
+        newsData = ArrayList<News>()
+        newsData.add(News("Morning News","xinhua",""))
+        newsData.add(News("Good morning America: welcome Taylor Swift","BBC","http://images.unsplash.com/photo-1548778052-311f4bc2b502?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"))
+        newsData.add(News("Biden fell down","White House","http://images.unsplash.com/photo-1593047614267-378b863c98c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1734&q=80"))
     }
 
     override fun onDestroyView() {

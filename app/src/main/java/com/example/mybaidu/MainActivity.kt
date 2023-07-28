@@ -5,12 +5,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.mybaidu.data.MyAdapter
-import com.example.mybaidu.data.News
 import com.example.mybaidu.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
