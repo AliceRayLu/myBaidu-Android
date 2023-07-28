@@ -1,5 +1,6 @@
 package com.example.mybaidu.data
 
+import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -9,10 +10,10 @@ import com.bumptech.glide.Glide
 import com.example.mybaidu.R
 import java.net.URL
 
-class MyAdapter(val data:List<News>): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(val data:List<News>,val context: Context): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = View.inflate(parent.context,R.layout.news_item,null)
+        val view = View.inflate(context,R.layout.news_item,null)
 //        val view = LayoutInflater.from(parent.context).inflate(R.layout.news_item, parent, false)
         return MyViewHolder(view)
     }

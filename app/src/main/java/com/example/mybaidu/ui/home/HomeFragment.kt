@@ -1,5 +1,8 @@
 package com.example.mybaidu.ui.home
 
+
+import com.example.mybaidu.databinding.FragmentHomeBinding
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +10,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.mybaidu.databinding.FragmentHomeBinding
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.mybaidu.R
+import com.example.mybaidu.data.MyAdapter
+import com.example.mybaidu.data.News
 
 class HomeFragment : Fragment() {
 
@@ -16,6 +23,9 @@ class HomeFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var context: Context
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,7 +42,25 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        recyclerView = root.findViewById(R.id.recyclerview)
+        context = root.context
+        var newsData = ArrayList<News>()
+        newsData.add(News("Morning News","xinhua",""))
+        newsData.add(News("Good morning America: welcome Taylor Swift","BBC","http://images.unsplash.com/photo-1548778052-311f4bc2b502?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"))
+        newsData.add(News("Biden fell down","White House","http://images.unsplash.com/photo-1593047614267-378b863c98c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1734&q=80"))
+        val adapter = MyAdapter(newsData,context)
+        recyclerView.adapter = adapter
+        val layoutManager = LinearLayoutManager(context)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        recyclerView.layoutManager = layoutManager
         return root
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+
     }
 
     override fun onDestroyView() {
