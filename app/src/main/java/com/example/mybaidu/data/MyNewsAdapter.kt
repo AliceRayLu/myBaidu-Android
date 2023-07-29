@@ -26,7 +26,7 @@ class MyNewsAdapter(val data:List<News>, val context: Context): RecyclerView.Ada
         if(item.photo != ""){
             val option:RequestOptions = RequestOptions().transform(RoundedCorners(50))
             Glide.with(holder.photo.context).load(item.photo).apply(option).
-            thumbnail(0.5f).into(holder.photo)
+            thumbnail(0.5f).placeholder(R.drawable.baseline_replay_circle_filled_24).into(holder.photo)
         }
 //        else{
 //            holder.photo.visibility = View.GONE

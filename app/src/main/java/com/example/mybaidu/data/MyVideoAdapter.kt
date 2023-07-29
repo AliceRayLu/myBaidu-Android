@@ -43,7 +43,8 @@ class MyVideoAdapter(val data:List<VideoInfo>, val context: Context): RecyclerVi
         holder.commentNum.text = item.commentNum.toString()
         holder.likeNum.text = item.likes.toString()
         val option1:RequestOptions = RequestOptions().transform(RoundedCorners(50))
-        Glide.with(holder.videoPic.context).load(item.photoPath).apply(option1).into(
+        Glide.with(holder.videoPic.context).load(item.photoPath).apply(option1).
+        placeholder(R.drawable.baseline_replay_circle_filled_24).into(
             object : CustomTarget<Drawable>() {
                 override fun onResourceReady(
                     resource: Drawable,
@@ -58,7 +59,7 @@ class MyVideoAdapter(val data:List<VideoInfo>, val context: Context): RecyclerVi
             }
         )
         val option:RequestOptions = RequestOptions().circleCrop()
-        Glide.with(holder.authorPic.context).load(item.authorPic).
-        apply(option).into(holder.authorPic)
+        Glide.with(holder.authorPic.context).load(item.authorPic)
+            .apply(option).placeholder(R.drawable.baseline_replay_circle_filled_24).into(holder.authorPic)
     }
 }

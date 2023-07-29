@@ -34,7 +34,7 @@ class NotificationsFragment : Fragment() {
         var imageView:ImageView = root.findViewById(R.id.user_avatar)
         val option:RequestOptions = RequestOptions().circleCrop()
         Glide.with(imageView.context).load("https://images.unsplash.com/photo-1602459599126-6cb8d0d80193?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80").
-        apply(option).into(imageView)
+        apply(option).placeholder(R.drawable.baseline_replay_circle_filled_24).into(imageView)
         return root
     }
 

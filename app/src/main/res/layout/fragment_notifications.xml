@@ -61,6 +61,47 @@
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:gravity="center_vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="30dp"
+                android:drawableLeft="@drawable/baseline_star_24"
+                android:drawablePadding="30dp"
+                android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                android:text="collection"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/outline_settings_24"
+                android:drawablePadding="30dp"
+                android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                android:text="settings"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:gravity="center_vertical" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="version 1.0.0\n @AliceRL 2023"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="80dp"/>
+            </RelativeLayout>
+
         </LinearLayout>
     </LinearLayout>
 
