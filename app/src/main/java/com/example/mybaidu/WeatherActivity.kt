@@ -19,11 +19,11 @@ class WeatherActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             fragmentTransaction.replace(R.id.container, WeatherFragment.newInstance()).commitNow()
         }
-//        val weatherFrag = supportFragmentManager.findFragmentById(R.id.weather)
-//        val backBtn = weatherFrag?.view?.findViewById<Button>(R.id.weather_back_btn)
-//        backBtn?.setOnClickListener{
-//            finish()
-////            Log.d("clickEvent","click back btn")
-//        }
+
+        val backBtn = findViewById<Button>(R.id.weather_back_btn)
+        backBtn?.setOnClickListener{
+            finish()
+//            Log.d("clickEvent","click back btn")
+        }
     }
 }

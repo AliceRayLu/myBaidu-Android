@@ -15,9 +15,12 @@
         android:theme="@style/Theme.Mybaidu"
         tools:targetApi="31">
         <activity
+            android:name=".AddNewsActivity"
+            android:exported="false" />
+        <activity
             android:name=".WeatherActivity"
             android:exported="false"
-            android:launchMode="standard"/>
+            android:launchMode="standard" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

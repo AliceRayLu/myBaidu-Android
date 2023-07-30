@@ -45,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="right">
                 <ImageButton
+                    android:id="@+id/add_news_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/add_btn"

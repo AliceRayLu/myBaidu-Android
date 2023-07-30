@@ -1,6 +1,8 @@
 package com.example.mybaidu
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -31,7 +33,10 @@ class MainActivity : AppCompatActivity() {
 //        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-
-
+        val addBtn:ImageButton = findViewById<ImageButton>(R.id.add_news_btn)
+        addBtn.setOnClickListener {
+            val intent = Intent(this,AddNewsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

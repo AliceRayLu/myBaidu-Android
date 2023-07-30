@@ -4,4 +4,12 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeatherActivity" />
+    tools:context=".WeatherActivity">
+    <Button
+        android:id="@+id/weather_back_btn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/baseline_arrow_back_ios_24" />
+</FrameLayout>
