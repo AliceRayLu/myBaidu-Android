@@ -51,7 +51,7 @@ class HomeFragment : Fragment() {
         recyclerView = root.findViewById(R.id.recyclerview)
         context = root.context
         initData()
-        val adapter = MyNewsAdapter(newsData,context)
+        val adapter = MyNewsAdapter(newsData,context,this.requireActivity())
         recyclerView.adapter = adapter
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = LinearLayoutManager.VERTICAL

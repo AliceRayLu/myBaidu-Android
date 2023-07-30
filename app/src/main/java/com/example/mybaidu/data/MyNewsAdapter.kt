@@ -1,21 +1,28 @@
 package com.example.mybaidu.data
 
 import android.content.Context
+import android.content.Intent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.example.mybaidu.NewsDetailActivity
 import com.example.mybaidu.R
 
-class MyNewsAdapter(val data:List<News>, val context: Context): RecyclerView.Adapter<MyNewsAdapter.MyViewHolder>() {
+class MyNewsAdapter(val data:List<News>, val context: Context,val activity: FragmentActivity): RecyclerView.Adapter<MyNewsAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = View.inflate(context,R.layout.news_item,null)
 //        val view = LayoutInflater.from(parent.context).inflate(R.layout.news_item, parent, false)
+        view.setOnClickListener {
+            val intent = Intent(activity,NewsDetailActivity::class.java)
+            context.startActivity(intent)
+        }
         return MyViewHolder(view)
     }
 
