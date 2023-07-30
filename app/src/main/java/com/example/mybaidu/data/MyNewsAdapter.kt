@@ -28,9 +28,10 @@ class MyNewsAdapter(val data:List<News>, val context: Context): RecyclerView.Ada
             Glide.with(holder.photo.context).load(item.photo).apply(option).
             thumbnail(0.5f).placeholder(R.drawable.baseline_replay_circle_filled_24).into(holder.photo)
         }
-//        else{
-//            holder.photo.visibility = View.GONE
-//        }
+        else{
+            holder.photo.visibility = View.GONE
+            holder.photowrapper.visibility = View.GONE
+        }
     }
 
     override fun getItemCount(): Int {
@@ -41,6 +42,6 @@ class MyNewsAdapter(val data:List<News>, val context: Context): RecyclerView.Ada
         var titleView: TextView = itemView.findViewById(R.id.news_text_head)
         var authorView: TextView = itemView.findViewById(R.id.news_text_author)
         var photo: ImageView = itemView.findViewById(R.id.news_photo)
-
+        var photowrapper:View = itemView.findViewById(R.id.news_photo_wrap)
     }
 }
