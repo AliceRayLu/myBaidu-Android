@@ -59,7 +59,7 @@
                 android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
                 android:text="history"
                 android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textSize="15sp"
                 android:gravity="center_vertical" />
             <TextView
                 android:layout_width="match_parent"
@@ -73,7 +73,7 @@
                 android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
                 android:text="collection"
                 android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textSize="15sp"
                 android:gravity="center_vertical" />
             <TextView
                 android:layout_width="match_parent"
@@ -88,7 +88,7 @@
                 android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
                 android:text="settings"
                 android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textSize="15sp"
                 android:gravity="center_vertical" />
             <RelativeLayout
                 android:layout_width="match_parent"

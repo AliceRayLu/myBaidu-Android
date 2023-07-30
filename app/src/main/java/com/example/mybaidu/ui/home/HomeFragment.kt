@@ -8,11 +8,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mybaidu.AddNewsActivity
 import com.example.mybaidu.R
 import com.example.mybaidu.WeatherActivity
 import com.example.mybaidu.data.MyNewsAdapter
@@ -60,14 +62,20 @@ class HomeFragment : Fragment() {
             val intent = Intent(this.activity,WeatherActivity::class.java)
             startActivity(intent)
         }
+
+        val addBtn: ImageButton = root.findViewById(R.id.add_news_btn)
+        addBtn.setOnClickListener {
+            val intent = Intent(this.activity, AddNewsActivity::class.java)
+            startActivity(intent)
+        }
         return root
     }
 
     fun initData(){
         newsData = ArrayList<News>()
         newsData.add(News("Morning News","xinhua",""))
-        newsData.add(News("Good morning America: welcome Taylor Swift","BBC","http://images.unsplash.com/photo-1548778052-311f4bc2b502?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"))
-        newsData.add(News("Biden fell down","White House","http://images.unsplash.com/photo-1593047614267-378b863c98c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1734&q=80"))
+        newsData.add(News("Good morning America: welcome Taylor Swift","BBC","https://images.unsplash.com/photo-1548778052-311f4bc2b502?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"))
+        newsData.add(News("Biden fell down","White House","https://images.unsplash.com/photo-1593047614267-378b863c98c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1734&q=80"))
     }
 
     override fun onDestroyView() {

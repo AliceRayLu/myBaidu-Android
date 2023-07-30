@@ -29,6 +29,93 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center_vertical" />
         </LinearLayout>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:singleLine="true"
+                android:background="@drawable/btn_input"
+                android:hint="@string/type_in_here"
+                android:textColorHint="@color/grey"
+                android:padding="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Pictures"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/baseline_add_box_24" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Abstract"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/btn_input"
+                android:hint="@string/type_in_here"
+                android:textColorHint="@color/grey"
+                android:padding="10dp"
+                android:gravity="top|left"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Main Body"
+                android:textSize="15sp"
+                android:textColor="@color/black" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/btn_input"
+                android:hint="@string/type_in_here"
+                android:textColorHint="@color/grey"
+                android:padding="10dp"
+                android:gravity="top|left" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="bottom|center"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:includeFontPadding="false"
+            android:text="submit"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_submit"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

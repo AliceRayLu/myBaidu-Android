@@ -33,10 +33,6 @@ class MainActivity : AppCompatActivity() {
 //        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        val addBtn:ImageButton = findViewById<ImageButton>(R.id.add_news_btn)
-        addBtn.setOnClickListener {
-            val intent = Intent(this,AddNewsActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 }
