@@ -32,13 +32,13 @@
                     android:layout_height="wrap_content"
                     android:text="Vanessa"
                     android:textColor="@color/black"
-                    android:textSize="30sp"/>
+                    android:textSize="20sp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="I am who i am"
                     android:textColor="@color/grey"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
