@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mybaidu.AddNewsActivity
 import com.example.mybaidu.R
+import com.example.mybaidu.SearchActivity
 import com.example.mybaidu.WeatherActivity
 import com.example.mybaidu.data.MyNewsAdapter
 import com.example.mybaidu.data.News
@@ -66,6 +68,12 @@ class HomeFragment : Fragment() {
         val addBtn: ImageButton = root.findViewById(R.id.add_news_btn)
         addBtn.setOnClickListener {
             val intent = Intent(this.activity, AddNewsActivity::class.java)
+            startActivity(intent)
+        }
+
+        val searchBtn:Button = root.findViewById(R.id.search_btn_main)
+        searchBtn.setOnClickListener {
+            val intent = Intent(this.activity,SearchActivity::class.java)
             startActivity(intent)
         }
         return root

@@ -75,6 +75,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
+                android:id="@+id/search_btn_main"
                 android:layout_width="360dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
