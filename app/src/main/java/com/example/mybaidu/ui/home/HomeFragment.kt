@@ -3,6 +3,7 @@ package com.example.mybaidu.ui.home
 
 import com.example.mybaidu.databinding.FragmentHomeBinding
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mybaidu.R
+import com.example.mybaidu.WeatherActivity
 import com.example.mybaidu.data.MyNewsAdapter
 import com.example.mybaidu.data.News
 
@@ -52,6 +54,12 @@ class HomeFragment : Fragment() {
         val layoutManager = LinearLayoutManager(context)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.layoutManager = layoutManager
+
+        val weatherView:TextView = root.findViewById(R.id.weather)
+        weatherView.setOnClickListener {
+            val intent = Intent(this.activity,WeatherActivity::class.java)
+            startActivity(intent)
+        }
         return root
     }
 
