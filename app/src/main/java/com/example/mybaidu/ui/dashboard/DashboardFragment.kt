@@ -35,7 +35,7 @@ class DashboardFragment : Fragment() {
 
         var recyclerView:RecyclerView = root.findViewById(R.id.video_recyclerview)
         initData()
-        val adapter = MyVideoAdapter(videoData,root.context)
+        val adapter = MyVideoAdapter(videoData,root.context,this.requireActivity())
         recyclerView.adapter = adapter
         val layoutManager = LinearLayoutManager(root.context)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
