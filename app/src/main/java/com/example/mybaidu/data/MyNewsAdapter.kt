@@ -21,6 +21,8 @@ class MyNewsAdapter(val data:List<News>, val context: Context,val activity: Frag
 //        val view = LayoutInflater.from(parent.context).inflate(R.layout.news_item, parent, false)
         view.setOnClickListener {
             val intent = Intent(activity,NewsDetailActivity::class.java)
+            intent.putExtra("title",view.findViewById<TextView>(R.id.news_text_head).text)
+            intent.putExtra("author",view.findViewById<TextView>(R.id.news_text_author).text)
             context.startActivity(intent)
         }
         return MyViewHolder(view)
@@ -33,11 +35,7 @@ class MyNewsAdapter(val data:List<News>, val context: Context,val activity: Frag
         if(item.photo != ""){
             val option:RequestOptions = RequestOptions().transform(RoundedCorners(50))
             Glide.with(holder.photo.context).load(item.photo).apply(option).
-            thumbnail(0.5f).placeholder(R.drawable.baseline_replay_circle_filled_24).into(holder.photo)
-        }
-        else{
-            holder.photo.visibility = View.GONE
-            holder.photowrapper.visibility = View.GONE
+            placeholder(R.drawable.baseline_replay_circle_filled_24).into(holder.photo)
         }
     }
 

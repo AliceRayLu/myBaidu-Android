@@ -81,9 +81,12 @@ class HomeFragment : Fragment() {
 
     fun initData(){
         newsData = ArrayList<News>()
-        newsData.add(News("Morning News !!!!!! !!!!!!! !!!!!!!!!!!","xinhua",""))
-        newsData.add(News("Good morning America: welcome Taylor Swift","BBC","https://images.unsplash.com/photo-1548778052-311f4bc2b502?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"))
-        newsData.add(News("Biden fell down","White House","https://images.unsplash.com/photo-1593047614267-378b863c98c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1734&q=80"))
+        newsData.add(News("Morning News","xinhua",""))
+        newsData.add(News("Good morning America: Welcome Taylor Swift","BBC","https://images.unsplash.com/photo-1548778052-311f4bc2b502?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"))
+        newsData.add(News("Biden: New Policy","White House","https://images.unsplash.com/photo-1593047614267-378b863c98c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1734&q=80"))
+        newsData.add(News("Why we need to protect earth","lonely planet",""))
+        newsData.add(News("Daily Reading","bookworms","https://images.unsplash.com/photo-1513001900722-370f803f498d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"))
+        newsData.add(News("How to make delicious biscuits","kitchen today","https://images.unsplash.com/photo-1689781062698-a958b26ba203?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"))
     }
 
     override fun onDestroyView() {
