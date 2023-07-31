@@ -1,28 +1,14 @@
 # FinalProject
 
-#### 介绍
-homework for baidu android development
+#### Introduction
+Homework for baidu android development: an Android APP simulating baidu browser
 
-#### 软件架构
-软件架构说明
+#### How to install apk
+
+1.  Clone this repository, download the source code
+2.  Use IDE to generate apk
+3.  Install apk on physical phone devices or Android simulators
 
 
-#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
 
